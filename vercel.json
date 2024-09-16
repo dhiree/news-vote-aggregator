@@ -7,17 +7,20 @@
         },
         {
             "src": "public/**/*",
-            "use": "@vercel/static"
+            "use": "@vercel/static-build",
+            "config": {
+                "distDir": "public"
+            }
         }
     ],
     "routes": [
         {
             "src": "/api/(.*)",
-            "dest": "backend/$1"
+            "dest": "/backend/$1"
         },
         {
             "src": "/(.*)",
-            "dest": "public/$1"
+            "dest": "/public/$1"
         }
     ]
 }
