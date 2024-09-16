@@ -1,38 +1,103 @@
-.App {
-  text-align: center;
+.container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.articles {
   display: flex;
   flex-direction: column;
+  gap: 20px;
+}
+
+.article-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.article-content {
+  padding: 20px;
+}
+
+.article-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.article-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+}
+
+.article-description {
+  margin-top: 10px;
+}
+
+.article-description p {
+  margin: 0 0 10px;
+}
+
+.article-description a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.article-description a:hover {
+  text-decoration: underline;
+}
+
+.article-votes {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 10px;
+  border-top: 1px solid #ddd;
 }
 
-.App-link {
-  color: #61dafb;
+.vote-button {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.25rem;
+  color: #333;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.vote-button:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.05);
+}
+
+.vote-icon {
+  width: 36px;
+  height: 36px;
+  margin-right: 10px;
+}
+
+.vote-count {
+  font-size: 1.25rem;
+}
+
+.total-votes {
+  font-size: 1rem;
+  color: #555;
+}
+
+.vote-icon {
+  width: 36px;
+  height: 36px;
 }
