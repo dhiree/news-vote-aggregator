@@ -12,7 +12,7 @@ function News() {
 
     const fetchArticles = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/api/articles');
+            const response = await axios.get('https://news-backend-snowy.vercel.app/api/articles');
             setArticles(response.data);
         } catch (error) {
             console.error('Error fetching articles:', error);
@@ -21,7 +21,7 @@ function News() {
 
     const handleVote = async (articleId, voteType) => {
         try {
-            await axios.post('http://localhost:5000/api/vote', {
+            await axios.post('https://news-backend-snowy.vercel.app/api/vote', {
                 articleId,
                 voteType,
                 userIp: 'dummy-ip'
